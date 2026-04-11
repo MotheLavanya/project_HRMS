@@ -1,0 +1,68 @@
+.integrations-hero {
+    background: linear-gradient(135deg, #f5f3ff 0%, #ffffff 100%);
+}
+
+.integrations-icon {
+    background: #7c3aed;
+    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+}
+
+.integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.integration-card {
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 28px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.integration-card:hover {
+    border-color: #7c3aed;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+}
+
+.integration-icon-wrap {
+    width: 64px;
+    height: 64px;
+    background: #f9fafb;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 1.5rem;
+}
+
+.integration-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.integration-card p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.connect-btn {
+    padding: 10px 24px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.connect-btn:hover {
+    background: #7c3aed;
+    color: white;
+    border-color: #7c3aed;
+}

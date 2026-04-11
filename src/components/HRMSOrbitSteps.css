@@ -1,0 +1,262 @@
+.orbit-steps-section {
+    padding: 80px 0 100px;
+    background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Blobs */
+.orbit-bg-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.orbit-blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    animation: blob-float 20s infinite alternate ease-in-out;
+}
+
+.blob-1 {
+    background: #f59e0b;
+    top: -20%;
+    right: -10%;
+}
+
+.blob-2 {
+    background: #7c3aed;
+    bottom: -15%;
+    left: -10%;
+    animation-delay: -10s;
+}
+
+@keyframes blob-float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(100px, 50px) scale(1.1);
+    }
+}
+
+/* Header Styling */
+.orbit-main-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1e293b 0%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.animate-gradient {
+    background: linear-gradient(90deg, #f59e0b, #7c3aed, #f59e0b);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: text-gradient 8s linear infinite;
+}
+
+@keyframes text-gradient {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.orbit-subheading {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    color: #374151;
+    font-weight: 500;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Orbit Stage */
+.orbit-container-wrapper {
+    position: relative;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orbit-main-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+}
+
+.orbit-center-hub {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+}
+
+.hub-inner-glass {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f59e0b;
+    box-shadow: 0 20px 50px rgba(124, 58, 237, 0.15);
+}
+
+.hub-sparkle {
+    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.5));
+    animation: rotate-sparkle 10s linear infinite;
+}
+
+@keyframes rotate-sparkle {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(180deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+.hub-glow-ring {
+    position: absolute;
+    inset: -20px;
+    border: 2px dashed rgba(124, 58, 237, 0.2);
+    border-radius: 50%;
+    animation: rotate-reverse 20s linear infinite;
+}
+
+@keyframes rotate-reverse {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Orbital Step Points */
+.orbit-step-point {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    pointer-events: none;
+}
+
+.orbit-step-content {
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.orbit-step-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #f59e0b, #7c3aed);
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(124, 58, 237, 0.25);
+}
+
+.icon-orbit-glow {
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: blur(15px);
+    opacity: 0.4;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.orbit-step-text h4 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.orbit-step-text p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .orbit-container-wrapper {
+        height: auto;
+        padding-top: 60px;
+    }
+
+    .orbit-main-stage {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        height: auto;
+        rotate: 0 !important;
+        scale: 1 !important;
+    }
+
+    .orbit-center-hub {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin-bottom: 40px;
+    }
+
+    .orbit-step-point {
+        position: relative;
+        left: auto !important;
+        top: auto !important;
+        transform: none;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .orbit-step-content {
+        rotate: 0 !important;
+    }
+}

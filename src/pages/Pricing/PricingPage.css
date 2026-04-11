@@ -1,0 +1,336 @@
+.pricing-page-root {
+    background: linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 100%);
+    min-height: 100vh;
+    padding-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Pattern */
+.pricing-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(#E2E8F0 1px, transparent 1px);
+    background-size: 32px 32px;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.pricing-bg-blur {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    filter: blur(140px);
+    opacity: 0.1;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.pricing-bg-blur.top-left {
+    background: var(--primary);
+    top: -200px;
+    left: -100px;
+}
+
+.pricing-bg-blur.bottom-right {
+    background: #EC4899;
+    bottom: -200px;
+    right: -100px;
+}
+
+.pricing-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 100px 40px 60px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header Section */
+.pricing-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.pricing-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: white;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    border-radius: 100px;
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.1);
+}
+
+.pricing-header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: #0F172A;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+.pricing-intro {
+    font-size: 1.25rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 48px;
+}
+
+/* Toggle Switch */
+.pricing-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 700;
+    color: #64748B;
+}
+
+.pricing-toggle-wrapper .active {
+    color: #0F172A;
+}
+
+.pricing-toggle-switch {
+    width: 72px;
+    height: 36px;
+    background: #E2E8F0;
+    border-radius: 100px;
+    padding: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.pricing-toggle-switch:hover {
+    background: #CBD5E1;
+}
+
+.toggle-handle {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.save-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #F0F9FF;
+    color: #0284C7;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    margin-left: 8px;
+}
+
+/* Pricing Grid */
+.pricing-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    align-items: center;
+}
+
+.pricing-card-modern {
+    background: white;
+    padding: 48px 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pricing-card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.popular-highlight {
+    border: 3px solid #7C3AED;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.popular-highlight:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.popular-ribbon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: #F5F3FF;
+    color: #7C3AED;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.plan-tagline {
+    display: block;
+    color: #94A3B8;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+}
+
+.plan-title-flex {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.plan-icon-modern {
+    width: 48px;
+    height: 48px;
+    background: #F8FAFC;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-title-flex h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.plan-price-modern {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.price-amount {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #0F172A;
+    letter-spacing: -0.02em;
+}
+
+.price-period {
+    color: #64748B;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.plan-desc-modern {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.plan-features-modern {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.plan-features-modern li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #334155;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.check-box-modern {
+    width: 24px;
+    height: 24px;
+    background: #F0FDF4;
+    color: #16A34A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.popular-highlight .check-box-modern {
+    background: #F5F3FF;
+    color: #7C3AED;
+}
+
+.pricing-btn-modern {
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid #E2E8F0;
+    background: white;
+    color: #0F172A;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.btn-popular {
+    background: linear-gradient(90deg, #7C3AED, #EC4899);
+    color: white;
+    border: none;
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.2);
+}
+
+.pricing-btn-modern:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-popular:hover {
+    color: white;
+    box-shadow: 0 15px 30px rgba(124, 58, 237, 0.3);
+}
+
+.pricing-trust-note {
+    text-align: center;
+    margin-top: 48px;
+    color: #94A3B8;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+    .popular-highlight {
+        transform: scale(1);
+    }
+
+    .popular-highlight:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-container {
+        padding: 120px 24px 60px;
+    }
+
+    .pricing-grid-modern {
+        grid-template-columns: 1fr;
+    }
+}

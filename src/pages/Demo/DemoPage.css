@@ -1,0 +1,665 @@
+:root {
+    --demo-primary: #6366f1; /* Indigo */
+    --demo-secondary: #10b981; /* Emerald */
+    --demo-accent: #8b5cf6; /* Violet */
+    --demo-bg: #f8fafc;
+    --demo-card-bg: rgba(255, 255, 255, 0.85);
+}
+
+.master-demo-page {
+    background: var(--demo-bg);
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+/* 1. Hero Section - Ultra Premium */
+.demo-hero {
+    position: relative;
+    padding: 180px 0 120px;
+    background: #ffffff;
+    overflow: hidden;
+    text-align: center;
+}
+
+.demo-hero-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 40%),
+                linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 50%, #eff6ff 100%);
+    background-size: 200% 200%;
+    animation: smoothGradient 15s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+@keyframes smoothGradient {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+.demo-hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.demo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 22px;
+    background: #ffffff;
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    border-radius: 100px;
+    color: var(--demo-primary);
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-bottom: 32px;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.demo-hero h1 {
+    font-size: clamp(2.8rem, 10vw, 4.5rem);
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -0.05em;
+    margin-bottom: 28px;
+    line-height: 1.05;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--demo-primary), var(--demo-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtext {
+    font-size: 1.35rem;
+    color: #475569;
+    max-width: 700px;
+    margin: 0 auto 48px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.hero-bullet-points {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.hero-bullet {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.6);
+    padding: 12px 24px;
+    border-radius: 100px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    backdrop-filter: blur(5px);
+}
+
+.bullet-icon {
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+/* 2. Demo Booking Form Section */
+.demo-booking-section {
+    padding: 100px 0;
+    background: #ffffff;
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+}
+
+.demo-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.booking-form-card {
+    background: var(--demo-card-bg);
+    padding: 60px;
+    border-radius: 40px;
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 40px 100px -20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+}
+
+.form-header {
+    margin-bottom: 40px;
+}
+
+.form-header h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+.form-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.actual-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #334155;
+    padding-left: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    padding: 16px 22px;
+    background: #f1f5f9;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #0f172a;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    background: #ffffff;
+    border-color: var(--demo-primary);
+    outline: none;
+    box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.15);
+    transform: translateY(-2px);
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.schedule-btn {
+    margin-top: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    font-size: 1.15rem;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.3);
+}
+
+.schedule-btn:hover {
+    background: linear-gradient(135deg, var(--demo-primary), var(--demo-accent));
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.4);
+}
+
+/* Confirmation state - High Impact */
+.confirmation-card {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.success-icon-box {
+    width: 120px;
+    height: 120px;
+    background: #ecfdf5;
+    color: var(--demo-secondary);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 35px;
+    transform: rotate(10deg);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.15);
+}
+
+.confirmation-card h3 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+.confirmation-card p {
+    color: #64748b;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    font-size: 1.15rem;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reset-btn {
+    padding: 14px 32px;
+    background: #f1f5f9;
+    border-radius: 100px;
+    font-weight: 800;
+    color: #475569;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+/* Benefits Column */
+.booking-benefits-col {
+    position: sticky;
+    top: 140px;
+}
+
+.benefits-illustration-card {
+    background: #ffffff;
+    border-radius: 40px;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.03);
+}
+
+.illustration-placeholder {
+    position: relative;
+    height: 280px;
+}
+
+.illustration-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.illustration-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.6));
+}
+
+.benefits-mini-list {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.mini-benefit {
+    display: flex;
+    gap: 20px;
+}
+
+.mini-icon {
+    width: 44px;
+    height: 44px;
+    background: #f0fdf4;
+    color: var(--demo-secondary);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);
+}
+
+.mini-benefit strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #1e293b;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.mini-benefit p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* 3. EXPERIENCE SECTION - Modern Grid */
+.demo-experience-section {
+    padding: 140px 0;
+    background: #f8fafc;
+}
+
+.experience-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.experience-header h2 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.experience-card {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 32px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.experience-card:hover {
+    transform: translateY(-15px);
+    border-color: rgba(99, 102, 241, 0.1);
+    box-shadow: 0 40px 80px -20px rgba(0,0,0,0.08);
+}
+
+.experience-icon {
+    width: 72px;
+    height: 72px;
+    background: #f5f3ff;
+    color: var(--demo-primary);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 32px;
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover .experience-icon {
+    background: var(--demo-primary);
+    color: white;
+    transform: rotate(10deg) scale(1.1);
+}
+
+.experience-card h3 {
+    font-size: 1.35rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+    color: #1e293b;
+}
+
+.experience-card p {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* 4. TRUST SECTION - Subtle Logos */
+.demo-trust-section {
+    padding: 100px 0;
+    text-align: center;
+    background: #ffffff;
+}
+
+.trust-label {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #94a3b8;
+    letter-spacing: 0.15em;
+    margin-bottom: 60px;
+}
+
+.logo-slider {
+    overflow: hidden;
+    padding: 20px 0;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.logo-track {
+    display: flex;
+    gap: 120px;
+    width: calc(280px * 10);
+    animation: scrollLogos 40s linear infinite;
+}
+
+@keyframes scrollLogos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-280px * 5)); }
+}
+
+.logo-item {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-item img {
+    height: 48px;
+    filter: grayscale(1) invert(0.2);
+    opacity: 0.4;
+    transition: all 0.4s ease;
+}
+
+.logo-item img:hover {
+    filter: grayscale(0) invert(0);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* 5. GLASS FLOW PROCESS SECTION - Ultra Compact & Attractive */
+.demo-process-section {
+    padding: 40px 0 60px; /* Ultra compact */
+    background: #0f172a;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.process-header h2 {
+    font-size: 2.22rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -0.04em;
+    background: linear-gradient(to right, #ffffff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.process-flow-container {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.flow-line-bg {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.flow-line-pulse {
+    height: 100%;
+    background: linear-gradient(to right, transparent, #3b82f6, #60a5fa, transparent);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+}
+
+.glass-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.glass-step-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.step-glass-capsule {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+    position: relative;
+}
+
+.glass-step-card:hover .step-glass-capsule {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+    transition: all 0.4s ease;
+}
+
+.glass-step-card:hover .step-number {
+    transform: rotate(10deg) scale(1.1);
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+}
+
+.step-content h4 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+    color: white;
+}
+
+.step-content p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.4;
+}
+
+.card-glow {
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+    border-radius: 26px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    filter: blur(10px);
+}
+
+.glass-step-card:hover .card-glow {
+    opacity: 1;
+}
+
+/* MOBILE RESPONSIVE - Bulletproof Stacking */
+@media (max-width: 1024px) {
+    .booking-grid { grid-template-columns: 1fr; gap: 40px; }
+    .booking-benefits-col { position: relative; top: 0; }
+    .booking-form-card { padding: 40px 30px; }
+}
+
+@media (max-width: 768px) {
+    .demo-hero { padding: 140px 0 80px; }
+    .demo-hero h1 { font-size: 2.8rem; }
+    .hero-subtext { font-size: 1.1rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .timeline-line-grow { display: none; }
+    .steps-container { grid-template-columns: 1fr; gap: 40px; }
+    .experience-grid { grid-template-columns: 1fr; }
+    .step-num-circle { width: 80px; height: 80px; font-size: 1.5rem; }
+}
+
+/* MOBILE RESPONSIVE - Stacked Capsules */
+@media (max-width: 900px) {
+    .glass-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .flow-line-bg {
+        display: none;
+    }
+    .step-glass-capsule {
+        padding: 20px;
+    }
+}

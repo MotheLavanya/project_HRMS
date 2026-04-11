@@ -1,0 +1,222 @@
+.cardless-value-section {
+    padding: 120px 0;
+    background: #fafafa;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Decorations */
+.value-bg-decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    filter: blur(120px);
+    opacity: 0.07;
+    border-radius: 50%;
+}
+
+.blob-amber {
+    background: #F59E0B;
+    top: -200px;
+    right: -100px;
+}
+
+.blob-purple {
+    background: #7C3AED;
+    bottom: -100px;
+    left: -100px;
+}
+
+/* Header */
+.value-header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 100px;
+}
+
+.value-main-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.gradient-text-alt {
+    background: linear-gradient(90deg, #F59E0B, #7C3AED);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.value-description-sl {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: #374151;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Points Container */
+.value-points-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.value-point-row {
+    margin-bottom: 40px;
+}
+
+.value-point-content {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    align-items: center;
+    gap: 0;
+}
+
+.value-point-content.row-reverse {
+    direction: rtl; /* This flips the columns on desktop */
+}
+
+/* Direction reset for text inside reversed rows */
+.value-point-content.row-reverse .text-column,
+.value-point-content.row-reverse .icon-column {
+    direction: ltr;
+}
+
+/* Columns */
+.icon-column {
+    display: flex;
+    justify-content: center;
+}
+
+.line-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.text-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Components */
+.value-icon-box {
+    width: 90px;
+    height: 90px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.icon-pulse {
+    position: absolute;
+    inset: -5px;
+    border-radius: inherit;
+    opacity: 0.2;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.dot-anchor {
+    width: 12px;
+    height: 12px;
+    background: #7c3aed;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+    z-index: 2;
+    margin: 20px 0;
+}
+
+.vertical-connector {
+    width: 2px;
+    background: linear-gradient(to bottom, #7C3AED, #F59E0B);
+    flex-grow: 1;
+    min-height: 100px;
+}
+
+.value-text-wrapper {
+    position: relative;
+    padding: 20px 40px;
+}
+
+.value-point-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.value-point-desc {
+    font-size: 1.1rem;
+    color: #4B5563;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.text-bg-highlight {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.03), transparent);
+    border-radius: 16px;
+    z-index: -1;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .value-point-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .value-point-content.row-reverse {
+        direction: ltr; /* Reset direction on mobile */
+    }
+
+    .line-column {
+        display: none; /* Hide connector on mobile for cleaner stack */
+    }
+
+    .icon-column {
+        order: 1;
+    }
+
+    .text-column {
+        order: 2;
+        align-items: center;
+    }
+
+    .value-text-wrapper {
+        padding: 0;
+    }
+
+    .value-point-desc {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .value-main-heading {
+        font-size: 2.5rem;
+    }
+}
