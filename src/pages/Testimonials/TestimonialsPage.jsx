@@ -94,12 +94,12 @@ const TestimonialsPage = ({ onNavigate }) => {
                 </div>
             </section>
 
-            <footer className="tp-cta-v2">
+            {/* <footer className="tp-cta-v2">
                 <h2>Ready to transform your workplace?</h2>
                 <button onClick={() => onNavigate('demo')} className="tp-primary-btn">
                     Start Your Free Trial
                 </button>
-            </footer>
+            </footer> */}
         </div>
     );
 };

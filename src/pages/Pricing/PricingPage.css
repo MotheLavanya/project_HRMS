@@ -68,7 +68,7 @@
 }
 
 .pricing-header h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 3vw, 4rem);
     font-weight: 900;
     color: #0F172A;
     margin-bottom: 24px;
@@ -332,5 +332,14 @@
 
     .pricing-grid-modern {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-card-modern {
+        padding: 32px 20px;
+    }
+    .price-amount {
+        font-size: 2.8rem;
     }
 }

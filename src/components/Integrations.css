@@ -303,4 +303,31 @@
     background: #7c3aed;
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .nexgen-diagram-viewport {
+        transform: scale(0.8);
+        height: 500px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nexgen-diagram-viewport {
+        transform: scale(0.6);
+        height: 400px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nexgen-diagram-viewport {
+        transform: scale(0.4);
+        height: 300px;
+        margin-top: 0px;
+    }
+    .nexgen-heading {
+        font-size: 1.8rem;
+    }
 }

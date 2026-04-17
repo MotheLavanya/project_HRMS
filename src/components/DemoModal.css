@@ -2,104 +2,165 @@
 .demo-overlay {
     position: fixed;
     inset: 0;
-    z-index: 1000;
-    background: rgba(2, 8, 20, 0.6);
-    backdrop-filter: blur(6px);
+    z-index: 99999;
+    background: rgba(15, 23, 42, 0.6); /* Slightly darker, blueish slate overlay */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 /* ─── Modal Box ───────────────────────────── */
 .demo-modal {
     position: relative;
     background: #ffffff;
-    border-radius: 1.5rem;
+    border-radius: 20px;
     width: 100%;
-    max-width: 500px;
-    max-height: 92vh;
-    overflow-y: auto;
-    padding: 2.5rem 2rem 2rem;
-    box-shadow:
-        0 0 0 1px rgba(15, 118, 110, 0.1),
-        0 30px 60px -10px rgba(0, 0, 0, 0.25);
-    scrollbar-width: thin;
-}
-
-/* ─── Top Accent Bar ──────────────────────── */
-.demo-top-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    border-radius: 1.5rem 1.5rem 0 0;
-    background: linear-gradient(90deg, #0F766E, #14b8a6, #34d399);
+    max-width: 850px; /* Wider for 2 columns */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    overflow: hidden; /* For inner border radius containment */
 }
 
 /* ─── Close Button ────────────────────────── */
 .demo-close {
     position: absolute;
-    top: 1.2rem;
-    right: 1.2rem;
-    width: 2rem;
-    height: 2rem;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #f1f5f9;
-    color: #64748b;
+    background: #F1F5F9;
+    color: #64748B;
     border: none;
     cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 .demo-close:hover {
-    background: #e2e8f0;
-    color: #1e293b;
+    background: #E2E8F0;
+    color: #0F172A;
+    transform: rotate(90deg);
 }
 
-/* ─── Header ──────────────────────────────── */
-.demo-header {
-    margin-bottom: 1.5rem;
+/* ─── Grid Layout ─────────────────────────── */
+.demo-modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    min-height: 500px;
+}
+
+@media (max-width: 768px) {
+    .demo-modal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ─── Left Side (Branding & Trust) ────────── */
+.demo-left {
+    background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #E2E8F0;
+}
+
+.demo-left-content {
+    max-width: 320px;
 }
 
 .demo-badge {
     display: inline-block;
-    font-size: 0.7rem;
+    padding: 6px 14px;
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563EB;
+    border-radius: 20px;
+    font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--primary);
-    background: rgba(15, 118, 110, 0.08);
-    border: 1px solid rgba(15, 118, 110, 0.2);
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
 }
 
 .demo-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     font-weight: 800;
-    color: #0f172a;
-    line-height: 1.25;
-    margin-bottom: 0.5rem;
+    color: #0F172A;
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
 
-.demo-subtitle {
+.demo-desc {
+    font-size: 1.05rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.demo-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.demo-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    color: #1E293B;
+    font-weight: 500;
+}
+
+.benefit-icon {
+    color: #2563EB;
+    flex-shrink: 0;
+}
+
+.demo-trust {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #64748B;
     font-size: 0.9rem;
-    color: #64748b;
-    line-height: 1.55;
+    font-weight: 500;
 }
 
-/* ─── Form ────────────────────────────────── */
+/* ─── Right Side (Form) ───────────────────── */
+.demo-right {
+    padding: 40px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .demo-form {
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
-    margin-bottom: 1.5rem;
+    gap: 16px;
+    width: 100%;
+}
+
+.demo-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 500px) {
+    .demo-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 .demo-field {
@@ -110,97 +171,78 @@
 
 .demo-field-icon {
     position: absolute;
-    left: 0.85rem;
-    color: #94a3b8;
+    left: 16px;
+    color: #94A3B8;
     pointer-events: none;
 }
 
-.demo-field input {
+.demo-field input,
+.demo-field select {
     width: 100%;
-    padding: 0.75rem 0.9rem 0.75rem 2.4rem;
-    border: 1.5px solid #e2e8f0;
-    border-radius: 0.75rem;
-    font-size: 0.9rem;
-    font-family: 'Inter', sans-serif;
-    color: #1e293b;
-    background: #f8fafc;
-    outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.demo-field input:focus {
-    border-color: var(--primary);
+    padding: 14px 14px 14px 44px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #0F172A;
     background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    appearance: none;
 }
 
+.demo-field select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2394A3B8%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px top 50%;
+    background-size: 10px auto;
+}
+
+/* Placeholder styles for inputs and selects */
 .demo-field input::placeholder {
-    color: #94a3b8;
+    color: #94A3B8;
 }
 
-/* Date input fix */
-.demo-field input[type="datetime-local"] {
-    color: #475569;
+.demo-field select:invalid,
+.demo-field select:not(.has-value) {
+    color: #94A3B8;
+}
+
+.demo-field input[type="datetime-local"]:not(.has-value) {
+    color: #94A3B8;
+}
+
+.demo-field input:focus,
+.demo-field select:focus {
+    border-color: #2563EB;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
 /* ─── Submit Button ───────────────────────── */
 .demo-submit {
     width: 100%;
-    padding: 0.85rem;
-    border-radius: 0.75rem;
+    padding: 16px;
+    border-radius: 99px; /* Pill shape */
     border: none;
-    background: linear-gradient(135deg, #0F766E 0%, #14b8a6 100%);
-    color: white;
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2563EB 0%, #4F46E5 100%);
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 16px rgba(15, 118, 110, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
 }
 
 .demo-submit:hover {
-    opacity: 0.92;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(15, 118, 110, 0.4);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
 }
 
 .demo-submit:active {
     transform: translateY(0);
-}
-
-/* ─── Benefits ────────────────────────────── */
-.demo-benefits {
-    padding-top: 1.25rem;
-    border-top: 1px solid #f1f5f9;
-}
-
-.demo-benefits-title {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: #94a3b8;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    margin-bottom: 0.75rem;
-}
-
-.demo-benefits-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.demo-benefit-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-size: 0.8rem;
-    color: var(--primary);
-    background: rgba(15, 118, 110, 0.07);
-    border: 1px solid rgba(15, 118, 110, 0.15);
-    padding: 0.3rem 0.7rem;
-    border-radius: 9999px;
-    font-weight: 500;
 }
 
 /* ─── Success State ───────────────────────── */
@@ -208,34 +250,51 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 1rem 0 0.5rem;
+    padding: 60px 40px;
+    min-height: 400px;
 }
 
 .demo-success-icon {
-    width: 5rem;
-    height: 5rem;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    background: rgba(15, 118, 110, 0.08);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(79, 70, 229, 0.1) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
-    margin-bottom: 1.25rem;
+    color: #2563EB;
+    margin-bottom: 25px;
 }
 
 .demo-success-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 800;
-    color: #0f172a;
-    margin-bottom: 0.6rem;
+    color: #0F172A;
+    margin-bottom: 12px;
 }
 
 .demo-success-msg {
-    font-size: 0.9rem;
-    color: #64748b;
-    margin-bottom: 1.5rem;
-    max-width: 320px;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 35px;
+    max-width: 400px;
+}
+
+.demo-submit-done {
+    padding: 14px 40px;
+    border-radius: 99px;
+    border: none;
+    background: #F1F5F9;
+    color: #0F172A;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.demo-submit-done:hover {
+    background: #E2E8F0;
+    transform: scale(1.05);
 }

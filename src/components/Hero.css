@@ -393,9 +393,32 @@
     .hero-badge-sl, .hero-actions-sl, .stats-grid-sl, .hero-description-sl {
         margin-left: auto;
         margin-right: auto;
+        justify-content: center;
     }
     
     .feature-card-sl {
         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-actions-sl {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+    
+    .btn-sl-primary, .btn-sl-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-container {
+        padding: 0 20px;
+        gap: 50px;
+    }
+
+    .hero-title-sl {
+        font-size: clamp(2rem, 8vw, 2.8rem);
     }
 }

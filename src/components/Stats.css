@@ -26,6 +26,16 @@
     }
 }
 
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .stat-value-wrapper {
+        font-size: 3rem;
+    }
+}
+
 .stat-item {
     text-align: center;
     position: relative;

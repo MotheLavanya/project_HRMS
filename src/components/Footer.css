@@ -96,6 +96,13 @@
     }
 }
 
+@media (max-width: 480px) {
+    .footer-nav-groups {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
 .footer-heading-v3 {
     font-size: 0.8125rem;
     font-weight: 700;
