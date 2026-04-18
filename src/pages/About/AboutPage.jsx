@@ -42,6 +42,41 @@ const AboutPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const [activeWhyIndex, setActiveWhyIndex] = useState(0);
+
+    const whyNexusFeatures = [
+        { 
+            text: "Easy to Use", 
+            icon: <Smile size={20} />,
+            image: "https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&q=80&w=800",
+            desc: "Intuitive interface designed for every team member, reducing training time and increasing adoption."
+        },
+        { 
+            text: "Secure & Reliable", 
+            icon: <ShieldCheck size={20} />,
+            image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+            desc: "Enterprise-grade security and 99.9% uptime ensure your people data is always safe and accessible."
+        },
+        { 
+            text: "Scalable Growth", 
+            icon: <Rocket size={20} />,
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            desc: "From startup to enterprise, our modular platform scales effortlessly alongside your organization."
+        },
+        { 
+            text: "Real-Time Insights", 
+            icon: <TrendingUp size={20} />,
+            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            desc: "Make data-driven decisions with instant access to analytics across every HR function."
+        },
+        { 
+            text: "24/7 Expert Support", 
+            icon: <Heart size={20} />,
+            image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800",
+            desc: "Our dedicated specialists are always on standby to ensure your HR ecosystem runs flawlessly."
+        }
+    ];
+
     const { scrollYProgress } = useScroll();
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
@@ -247,41 +282,130 @@ const AboutPage = () => {
                 </div>
             </section>
 
-            {/* 3. Mission & Vision */}
-            <section className="section-pro">
-                <div className="container-pro">
-                    <div className="mission-grid-pro">
-                        <motion.div
-                            className="mission-card-pro"
-                            whileHover={{ y: -20 }}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="icon-box-pro"><Target /></div>
-                            <h3 style={{ fontSize: '2rem', marginBottom: '15px' }}>Mission</h3>
-                            <p className="section-text-pro">To simplify HR operations through smart automation and user-friendly technology.</p>
-                        </motion.div>
-                        <motion.div
-                            className="mission-card-pro"
-                            whileHover={{ y: -20 }}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.2 }}
-                        >
-                            <div className="icon-box-pro"><Rocket /></div>
-                            <h3 style={{ fontSize: '2rem', marginBottom: '15px' }}>Vision</h3>
-                            <p className="section-text-pro">To become a trusted HR partner for businesses worldwide by delivering innovative and scalable solutions.</p>
-                        </motion.div>
+            {/* 3. Mission & Vision - Immersive Splitscreen Portals */}
+            <section className="mission-vision-wrapper">
+                <div className="mission-vision-panes">
+                    {/* Mission Pane */}
+                    <motion.div 
+                        className="pane mission-pane"
+                        initial={{ flex: 1 }}
+                        whileHover={{ flex: 1.3 }}
+                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                        <div className="pane-particles"></div>
+                        <div className="pane-bg-overlay"></div>
+                        <div className="pane-content">
+                            <motion.div 
+                                className="pane-icon-massive"
+                                initial={{ opacity: 0.1, x: -50 }}
+                                whileInView={{ opacity: 0.1, x: 0 }}
+                                viewport={{ once: true }}
+                            >
+                                <Target size={280} strokeWidth={1} />
+                            </motion.div>
+                            
+                            <div className="pane-text-area">
+                                <motion.div 
+                                    className="pane-badge"
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                >
+                                    Our Purpose
+                                </motion.div>
+                                <motion.h2 
+                                    className="pane-title"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                >
+                                    The Mission
+                                </motion.h2>
+                                <motion.p 
+                                    className="pane-desc"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2 }}
+                                >
+                                    To simplify HR operations through smart automation 
+                                    and user-friendly technology, allowing teams to 
+                                    focus on what truly matters.
+                                </motion.p>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Animated Portal Line */}
+                    <div className="portal-line">
+                        <div className="portal-line-glow"></div>
                     </div>
+
+                    {/* Vision Pane */}
+                    <motion.div 
+                        className="pane vision-pane"
+                        initial={{ flex: 1 }}
+                        whileHover={{ flex: 1.3 }}
+                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                        <div className="pane-particles"></div>
+                        <div className="pane-bg-overlay"></div>
+                        <div className="pane-content">
+                            <motion.div 
+                                className="pane-icon-massive"
+                                initial={{ opacity: 0.1, x: 50 }}
+                                whileInView={{ opacity: 0.1, x: 0 }}
+                                viewport={{ once: true }}
+                            >
+                                <Rocket size={280} strokeWidth={1} />
+                            </motion.div>
+
+                            <div className="pane-text-area">
+                                <motion.div 
+                                    className="pane-badge"
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.1 }}
+                                >
+                                    Our Aspiration
+                                </motion.div>
+                                <motion.h2 
+                                    className="pane-title"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                >
+                                    The Vision
+                                </motion.h2>
+                                <motion.p 
+                                    className="pane-desc"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.3 }}
+                                >
+                                    To become the world's most trusted HR partner, 
+                                    delivering innovative and scalable solutions that 
+                                    power global growth.
+                                </motion.p>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
-            {/* 4. What We Offer - Compact Aura Pulse */}
+            {/* 4. What We Offer - Liquid Glass Ecosystem */}
             <section className="offer-section-pro">
-                <div className="container-pro">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                {/* Background Decorations */}
+                <div className="offer-bg-visuals">
+                    <div className="mesh-gradient"></div>
+                    <div className="glass-orb orb-1"></div>
+                    <div className="glass-orb orb-2"></div>
+                </div>
+
+                <div className="container-pro relative z-10">
+                    <div style={{ textAlign: 'center', marginBottom: '40px' }}>
                         <h2 className="section-title-pro">What We Offer</h2>
                         <p className="section-text-pro" style={{ maxWidth: '700px', margin: '0 auto' }}>
                             All tools are integrated into one powerful system, eliminating manual work and improving efficiency.
@@ -292,10 +416,10 @@ const AboutPage = () => {
                             <motion.div
                                 key={i}
                                 className="pulse-tile"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: i * 0.08, duration: 0.6 }}
+                                transition={{ delay: i * 0.05, duration: 0.5 }}
                                 onMouseMove={(e) => {
                                     const rect = e.currentTarget.getBoundingClientRect();
                                     const x = e.clientX - rect.left;
@@ -304,9 +428,11 @@ const AboutPage = () => {
                                     e.currentTarget.style.setProperty('--shimmer-y', `${y}px`);
                                 }}
                             >
+                                <div className="tile-border"></div>
                                 <div className="tile-shimmer"></div>
                                 <div className="pulse-icon-box">
                                     {offer.icon}
+                                    <div className="icon-aura"></div>
                                 </div>
                                 <h3 className="pulse-title">{offer.title}</h3>
                                 <p className="pulse-desc">
@@ -318,9 +444,23 @@ const AboutPage = () => {
                 </div>
             </section>
 
-            {/* 5. Why Choose Us - Nexus of Excellence */}
-            <section className="section-pro">
+            {/* 5. Why Choose Us - Interactive Nexus */}
+            <section className="section-pro why-nexus-section">
                 <div className="container-pro">
+                    {/* Standalone Header for Perfect Alignment */}
+                    <motion.div 
+                        className="why-nexus-header"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="section-title-pro">Why Choose Us</h2>
+                        <p className="section-text-pro">
+                            We combine human-centric design with powerful automation to deliver 
+                            an HR experience that teams actually love using.
+                        </p>
+                    </motion.div>
+
                     <div className="why-nexus-container">
                         <motion.div
                             className="why-nexus-content"
@@ -328,23 +468,12 @@ const AboutPage = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="section-title-pro">Why Choose Us</h2>
-                            <p className="section-text-pro">
-                                We focus on delivering value through innovation, reliability, and absolute customer satisfaction.
-                                Our platform is architected to evolve with your organization.
-                            </p>
-
                             <div className="value-pill-stack">
-                                {[
-                                    { text: "Easy to Use", icon: <Smile size={20} /> },
-                                    { text: "Secure & Reliable", icon: <ShieldCheck size={20} /> },
-                                    { text: "Scalable for Growing Teams", icon: <Rocket size={20} /> },
-                                    { text: "Real-Time Insights", icon: <TrendingUp size={20} /> },
-                                    { text: "24/7 Support", icon: <Heart size={20} /> }
-                                ].map((pill, i) => (
+                                {whyNexusFeatures.map((pill, i) => (
                                     <motion.div
                                         key={i}
-                                        className="value-pill"
+                                        className={`value-pill ${activeWhyIndex === i ? 'active' : ''}`}
+                                        onClick={() => setActiveWhyIndex(i)}
                                         initial={{ opacity: 0, x: -30 }}
                                         whileInView={{ opacity: 1, x: 0 }}
                                         viewport={{ once: true }}
@@ -353,38 +482,66 @@ const AboutPage = () => {
                                         <div className="value-pill-icon">
                                             {pill.icon}
                                         </div>
-                                        <span className="value-pill-text">{pill.text}</span>
+                                        <div className="value-pill-info">
+                                            <span className="value-pill-text">{pill.text}</span>
+                                            {activeWhyIndex === i && (
+                                                <motion.p 
+                                                    className="value-pill-desc-inline"
+                                                    initial={{ opacity: 0, height: 0 }}
+                                                    animate={{ opacity: 1, height: 'auto' }}
+                                                >
+                                                    {pill.desc}
+                                                </motion.p>
+                                            )}
+                                        </div>
                                         <div className="value-pill-sweep"></div>
+                                        {activeWhyIndex === i && (
+                                            <motion.div 
+                                                className="active-indicator"
+                                                layoutId="pill-indicator"
+                                            />
+                                        )}
                                     </motion.div>
                                 ))}
                             </div>
                         </motion.div>
 
-                        <div className="ui-composite-pro">
-                            <motion.div
-                                className="ui-layer layer-1"
-                                initial={{ opacity: 0, scale: 0.8, x: -100 }}
-                                whileInView={{ opacity: 1, scale: 1, x: -80 }}
-                                transition={{ duration: 1 }}
-                            >
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600" alt="Analytics" />
-                            </motion.div>
-                            <motion.div
-                                className="ui-layer layer-2"
-                                initial={{ opacity: 0, scale: 0.8, x: 100 }}
-                                whileInView={{ opacity: 1, scale: 1, x: 80 }}
-                                transition={{ duration: 1, delay: 0.2 }}
-                            >
-                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" alt="Dashboard" />
-                            </motion.div>
-                            <motion.div
-                                className="ui-layer layer-3"
-                                initial={{ opacity: 0, y: 150 }}
-                                whileInView={{ opacity: 0.7, y: 120 }}
-                                transition={{ duration: 1, delay: 0.4 }}
-                            >
-                                <img src="https://images.unsplash.com/photo-1504868584819-f8e90526ef7d?auto=format&fit=crop&q=80&w=800" alt="Data" />
-                            </motion.div>
+                        <div className="why-nexus-visual">
+                            <AnimatePresence mode="wait">
+                                <motion.div 
+                                    key={activeWhyIndex}
+                                    className="nexus-image-container"
+                                    initial={{ opacity: 0, scale: 0.95, x: 20 }}
+                                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                                    exit={{ opacity: 0, scale: 0.95, x: -20 }}
+                                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                                >
+                                    <div className="nexus-image-frame">
+                                        <img 
+                                            src={whyNexusFeatures[activeWhyIndex].image} 
+                                            alt={whyNexusFeatures[activeWhyIndex].text} 
+                                        />
+                                        <div className="nexus-glass-overlay"></div>
+                                    </div>
+                                    {/* Decorative floating elements */}
+                                    <motion.div 
+                                        className="floating-card-pro fc-1"
+                                        animate={{ y: [0, -15, 0] }}
+                                        transition={{ duration: 6, repeat: Infinity }}
+                                    >
+                                        <div className="fc-icon"><ShieldCheck size={16} /></div>
+                                        <span>Verified Secure</span>
+                                    </motion.div>
+                                    <motion.div 
+                                        className="floating-card-pro fc-2"
+                                        animate={{ y: [0, 15, 0] }}
+                                        transition={{ duration: 7, repeat: Infinity, delay: 1 }}
+                                    >
+                                        <div className="fc-icon"><TrendingUp size={16} /></div>
+                                        <span>+24% Productivity</span>
+                                    </motion.div>
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
                     </div>
                 </div>

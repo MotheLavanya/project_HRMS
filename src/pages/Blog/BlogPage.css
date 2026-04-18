@@ -29,12 +29,13 @@
 }
 
 .minimal-header h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: #0f172a;
-    margin-bottom: 24px;
-    letter-spacing: -0.04em;
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
 }
+
 
 .text-gradient {
     background: linear-gradient(135deg, #6366f1, #a855f7);
@@ -44,12 +45,13 @@
 }
 
 .minimal-header p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #64748b;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
 }
+
 
 /* 2. Filter System */
 .filter-system {
@@ -124,8 +126,9 @@
 .posts-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    gap: 20px;
 }
+
 
 .blog-card {
     background: #ffffff;
@@ -145,9 +148,10 @@
 
 .card-thumb {
     position: relative;
-    height: 240px;
+    height: 170px;
     overflow: hidden;
 }
+
 
 .card-thumb img {
     width: 100%;
@@ -176,21 +180,23 @@
 }
 
 .card-details {
-    padding: 32px;
+    padding: 20px 24px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
+
 .card-meta {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 0.875rem;
+    gap: 10px;
+    font-size: 0.8125rem;
     color: #94a3b8;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-weight: 500;
 }
+
 
 .card-meta span {
     display: flex;
@@ -206,23 +212,25 @@
 }
 
 .card-details h3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 800;
     line-height: 1.3;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     color: #0f172a;
 }
 
+
 .card-details p {
     color: #64748b;
-    line-height: 1.6;
-    margin-bottom: 28px;
-    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    font-size: 0.875rem;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
 
 .card-link {
     margin-top: auto;

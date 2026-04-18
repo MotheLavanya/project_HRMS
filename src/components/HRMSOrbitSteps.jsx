@@ -73,7 +73,7 @@ const HRMSOrbitSteps = () => {
 
             <div className="container mx-auto px-6 relative z-10">
                 {/* Header */}
-                <div className="text-center max-w-4xl mx-auto mb-16 value-header-wrapper">
+                <div className="text-center max-w-4xl mx-auto mb-10 value-header-wrapper">
                     <motion.h2 
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -111,8 +111,8 @@ const HRMSOrbitSteps = () => {
                         {/* Steps Orbiting */}
                         {steps.map((step) => {
                             const radian = (step.angle * Math.PI) / 180;
-                            const x = Math.cos(radian) * 260; // Reduced Radius
-                            const y = Math.sin(radian) * 260;
+                            const x = Math.cos(radian) * 210; // Reduced Radius
+                            const y = Math.sin(radian) * 210;
 
                             return (
                                 <motion.div

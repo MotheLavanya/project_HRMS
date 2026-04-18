@@ -1,5 +1,5 @@
 .cardless-value-section {
-    padding: 120px 0;
+    padding: 80px 0;
     background: #fafafa;
     position: relative;
     overflow: hidden;
@@ -41,7 +41,7 @@
     align-items: center;
     text-align: center;
     max-width: 850px;
-    margin: 0 auto 100px;
+    margin: 0 auto 50px;
 }
 
 .value-main-heading {
@@ -76,7 +76,7 @@
 }
 
 .value-point-row {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .value-point-content {
@@ -117,8 +117,8 @@
 
 /* Components */
 .value-icon-box {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 24px;
     display: flex;
     align-items: center;
@@ -144,19 +144,19 @@
     border: 3px solid #fff;
     box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
     z-index: 2;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .vertical-connector {
     width: 2px;
     background: linear-gradient(to bottom, #7C3AED, #F59E0B);
     flex-grow: 1;
-    min-height: 100px;
+    min-height: 60px;
 }
 
 .value-text-wrapper {
     position: relative;
-    padding: 20px 40px;
+    padding: 10px 40px;
 }
 
 .value-point-title {
