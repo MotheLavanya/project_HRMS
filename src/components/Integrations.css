@@ -2,7 +2,8 @@
     padding: 100px 0;
     position: relative;
     overflow: hidden;
-    background: #f8fafc; /* Premium Light Base */
+    background: #f8fafc;
+    /* Premium Light Base */
 }
 
 /* Mesh Gradient and Grid */
@@ -22,21 +23,44 @@
     animation: orb-drift 15s infinite alternate ease-in-out;
 }
 
-.orb-1 { background: #f59e0b; top: -20%; left: -10%; }
-.orb-2 { background: #7c3aed; bottom: -20%; right: -10%; animation-delay: -7s; }
-.orb-3 { background: #3b82f6; top: 10%; left: 20%; width: 500px; height: 500px; opacity: 0.08; }
+.orb-1 {
+    background: #f59e0b;
+    top: -20%;
+    left: -10%;
+}
+
+.orb-2 {
+    background: #7c3aed;
+    bottom: -20%;
+    right: -10%;
+    animation-delay: -7s;
+}
+
+.orb-3 {
+    background: #3b82f6;
+    top: 10%;
+    left: 20%;
+    width: 500px;
+    height: 500px;
+    opacity: 0.08;
+}
 
 @keyframes orb-drift {
-    from { transform: translate(0, 0) scale(1); }
-    to { transform: translate(100px, 40px) scale(1.05); }
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(100px, 40px) scale(1.05);
+    }
 }
 
 .grid-overlay {
     position: absolute;
     inset: 0;
-    background-image: 
-        linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
     background-size: 50px 50px;
 }
 
@@ -47,7 +71,7 @@
     gap: 8px;
     padding: 8px 20px;
     background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(124, 58, 237, 0.1);
     border-radius: 99px;
     font-size: 0.75rem;
@@ -66,7 +90,7 @@
 }
 
 .nexgen-heading {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.1;
     color: #0f172a;
@@ -82,7 +106,8 @@
 }
 
 .nexgen-subheading {
-    font-size: 1.125rem; /* Decreased size */
+    font-size: 1.125rem;
+    /* Decreased size */
     color: #64748b;
     line-height: 1.6;
     max-width: 700px;
@@ -93,7 +118,8 @@
 /* Diagram Viewport */
 .nexgen-diagram-viewport {
     position: relative;
-    height: 600px; /* Decreased height */
+    height: 600px;
+    /* Decreased height */
     margin-top: 60px;
     display: flex;
     align-items: center;
@@ -150,12 +176,13 @@
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(25px);
     border: 1px solid rgba(124, 58, 237, 0.2);
-    border-radius: 50%; /* Changed to circle */
+    border-radius: 50%;
+    /* Changed to circle */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    box-shadow: 
+    box-shadow:
         0 15px 40px rgba(124, 58, 237, 0.15),
         inset 0 0 20px rgba(124, 58, 237, 0.05);
 }
@@ -190,8 +217,15 @@
 }
 
 @keyframes engine-pulse {
-    0% { transform: scale(1); opacity: 0.8; }
-    100% { transform: scale(1.5); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
 
 /* Integration Nodes */
@@ -202,11 +236,20 @@
     animation: node-float 6s infinite ease-in-out;
 }
 
-.nexgen-node-wrapper:nth-child(even) { animation-delay: -3s; }
+.nexgen-node-wrapper:nth-child(even) {
+    animation-delay: -3s;
+}
 
 @keyframes node-float {
-    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
-    50% { transform: translate(-50%, -50%) translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translateY(-10px);
+    }
 }
 
 .hyper-glass-card {
@@ -221,9 +264,9 @@
     align-items: center;
     gap: 8px;
     cursor: pointer;
-    box-shadow: 
-        0 4px 12px rgba(0,0,0,0.03),
-        inset 0 0 20px rgba(255,255,255,0.5);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.03),
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
     overflow: hidden;
@@ -245,7 +288,7 @@
     align-items: center;
     justify-content: center;
     z-index: 2;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .node-info {
@@ -327,7 +370,8 @@
         height: 300px;
         margin-top: 0px;
     }
+
     .nexgen-heading {
         font-size: 1.8rem;
     }
-}
+}

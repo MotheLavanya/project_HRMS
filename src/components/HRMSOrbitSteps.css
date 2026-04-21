@@ -1,5 +1,5 @@
 .orbit-steps-section {
-    padding: 60px 0 70px;
+    padding: 40px 0;
     background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
     position: relative;
     overflow: hidden;
@@ -47,10 +47,10 @@
 
 /* Header Styling */
 .orbit-main-heading {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     letter-spacing: -0.04em;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -80,7 +80,7 @@
 }
 
 .orbit-subheading {
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
     color: #374151;
     font-weight: 500;
     max-width: 700px;
@@ -91,7 +91,7 @@
 /* Orbit Stage */
 .orbit-container-wrapper {
     position: relative;
-    height: 520px;
+    height: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -209,17 +209,17 @@
 }
 
 .orbit-step-text h4 {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 800;
     color: #1f2937;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     letter-spacing: -0.01em;
 }
 
 .orbit-step-text p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #4b5563;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /* Mobile Responsiveness */
@@ -269,7 +269,7 @@
     }
     
     .orbit-main-heading {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
     
     .hub-inner-glass {

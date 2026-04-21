@@ -117,7 +117,7 @@
 
 .p-badge {
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 800;
     text-transform: uppercase;
     color: var(--primary);
@@ -129,7 +129,7 @@
 }
 
 .card-form-header h1 {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
     font-weight: 900;
     color: #0f172a;
     letter-spacing: -0.02em;
@@ -137,7 +137,7 @@
 }
 
 .card-form-header p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #64748b;
     margin-bottom: 30px;
     line-height: 1.5;
@@ -162,7 +162,7 @@
 }
 
 .card-input-group label {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: #334155;
 }
@@ -174,7 +174,7 @@
     border: 1.5px solid #f1f5f9;
     background: #f8fafc;
     border-radius: 14px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
     color: #1e293b;
 }
@@ -200,7 +200,7 @@
     padding: 16px;
     border-radius: 14px;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.95rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -242,13 +242,13 @@
 }
 
 .card-info-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.65rem;
     font-weight: 800;
     margin-bottom: 8px;
 }
 
 .card-info-header p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     opacity: 0.8;
     line-height: 1.5;
 }
@@ -287,7 +287,7 @@
 
 .item-details label {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: 700;
     opacity: 0.6;
@@ -296,7 +296,7 @@
 }
 
 .item-details p {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 700;
 }
 
@@ -312,7 +312,7 @@
     align-items: center;
     gap: 12px;
     width: fit-content;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -345,7 +345,7 @@
 }
 
 .card-info-footer p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     opacity: 0.5;
     margin-bottom: 18px;
@@ -397,7 +397,7 @@
 }
 
 .card-success h2 {
-    font-size: 1.8rem;
+    font-size: 1.65rem;
     margin-bottom: 12px;
     color: #0f172a;
 }

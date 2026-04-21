@@ -1,5 +1,5 @@
 .cardless-value-section {
-    padding: 80px 0;
+    padding: 40px 0;
     background: #fafafa;
     position: relative;
     overflow: hidden;
@@ -41,14 +41,14 @@
     align-items: center;
     text-align: center;
     max-width: 850px;
-    margin: 0 auto 50px;
+    margin: 0 auto 30px;
 }
 
 .value-main-heading {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #1F2937;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     letter-spacing: -0.04em;
     line-height: 1.1;
     text-align: center;
@@ -62,7 +62,7 @@
 }
 
 .value-description-sl {
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
     color: #374151;
     font-weight: 500;
     text-align: center;
@@ -76,12 +76,12 @@
 }
 
 .value-point-row {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .value-point-content {
     display: grid;
-    grid-template-columns: 1fr 80px 1fr;
+    grid-template-columns: 1fr 48px 1fr;
     align-items: center;
     gap: 0;
 }
@@ -117,14 +117,14 @@
 
 /* Components */
 .value-icon-box {
-    width: 80px;
-    height: 80px;
-    border-radius: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .icon-pulse {
@@ -151,26 +151,26 @@
     width: 2px;
     background: linear-gradient(to bottom, #7C3AED, #F59E0B);
     flex-grow: 1;
-    min-height: 60px;
+    min-height: 20px;
 }
 
 .value-text-wrapper {
     position: relative;
-    padding: 10px 40px;
+    padding: 10px 24px;
 }
 
 .value-point-title {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #111827;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     letter-spacing: -0.02em;
 }
 
 .value-point-desc {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: #4B5563;
-    line-height: 1.6;
+    line-height: 1.5;
     max-width: 400px;
 }
 

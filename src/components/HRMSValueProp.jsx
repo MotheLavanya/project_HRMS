@@ -12,42 +12,42 @@ import './HRMSValueProp.css';
 
 const valueItems = [
     {
-        icon: <Clock size={42} strokeWidth={1.5} />,
+        icon: <Clock size={28} strokeWidth={1.5} />,
         title: "Save Time",
         description: "Automate repetitive HR tasks and focus on people.",
         iconBg: "rgba(245, 158, 11, 0.1)",
         glowColor: "#F59E0B"
     },
     {
-        icon: <Users size={42} strokeWidth={1.5} />,
+        icon: <Users size={28} strokeWidth={1.5} />,
         title: "Improve Employee Experience",
         description: "Employees access info, leave, and payroll easily.",
         iconBg: "rgba(124, 58, 237, 0.1)",
         glowColor: "#7C3AED"
     },
     {
-        icon: <BarChart3 size={42} strokeWidth={1.5} />,
+        icon: <BarChart3 size={28} strokeWidth={1.5} />,
         title: "Make Smarter Decisions",
         description: "Dashboards and reports deliver real-time insights.",
         iconBg: "rgba(245, 158, 11, 0.1)",
         glowColor: "#F59E0B"
     },
     {
-        icon: <Lock size={42} strokeWidth={1.5} />,
+        icon: <Lock size={28} strokeWidth={1.5} />,
         title: "Secure & Compliant",
         description: "Keep HR data safe and meet regulations.",
         iconBg: "rgba(124, 58, 237, 0.1)",
         glowColor: "#7C3AED"
     },
     {
-        icon: <Zap size={42} strokeWidth={1.5} />,
+        icon: <Zap size={28} strokeWidth={1.5} />,
         title: "Boost Productivity",
         description: "Reduce manual work and errors.",
         iconBg: "rgba(245, 158, 11, 0.1)",
         glowColor: "#F59E0B"
     },
     {
-        icon: <LayoutDashboard size={42} strokeWidth={1.5} />,
+        icon: <LayoutDashboard size={28} strokeWidth={1.5} />,
         title: "Centralized Control",
         description: "Manage all HR operations in one place.",
         iconBg: "rgba(124, 58, 237, 0.1)",

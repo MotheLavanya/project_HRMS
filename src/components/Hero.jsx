@@ -25,7 +25,7 @@ const StatCounter = ({ value, suffix = "" }) => {
     return <span>{displayValue.toLocaleString()}{suffix}</span>;
 };
 
-const Hero = () => {
+const Hero = ({ onDemoClick, onNavigate }) => {
     // 3D Tilt Values
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -115,8 +115,8 @@ const Hero = () => {
                     </motion.p>
 
                     <motion.div variants={itemVariants} className="hero-actions-sl">
-                        <button className="btn-sl-primary">Start Free Trial</button>
-                        <button className="btn-sl-secondary">Request Demo</button>
+                        <button className="btn-sl-primary" onClick={() => onNavigate('pricing')}>Start Free Trial</button>
+                        <button className="btn-sl-secondary" onClick={onDemoClick}>Request Demo</button>
                     </motion.div>
 
                     {/* Trust Text & Statistics - Premium Redesign */}

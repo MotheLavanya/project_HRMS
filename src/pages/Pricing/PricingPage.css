@@ -41,7 +41,7 @@
 .pricing-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 100px 40px 60px;
+    padding: 60px 40px 40px;
     position: relative;
     z-index: 1;
 }
@@ -50,37 +50,37 @@
 .pricing-header {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 60px;
+    margin: 0 auto 30px;
 }
 
 .pricing-badge {
     display: inline-block;
-    padding: 8px 20px;
+    padding: 6px 16px;
     background: white;
     border: 1px solid rgba(124, 58, 237, 0.2);
     border-radius: 100px;
     color: var(--primary);
     font-weight: 800;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     letter-spacing: 0.15em;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     box-shadow: 0 4px 15px rgba(124, 58, 237, 0.1);
 }
 
 .pricing-header h1 {
-    font-size: clamp(2.5rem, 3vw, 4rem);
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
     font-weight: 900;
     color: #0F172A;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     letter-spacing: -0.04em;
     line-height: 1.1;
 }
 
 .pricing-intro {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #475569;
     line-height: 1.6;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 /* Toggle Switch */
@@ -88,9 +88,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
     font-weight: 700;
     color: #64748B;
+    font-size: 0.9rem;
 }
 
 .pricing-toggle-wrapper .active {
@@ -121,11 +122,11 @@
 
 .save-badge {
     display: inline-block;
-    padding: 4px 10px;
+    padding: 4px 8px;
     background: #F0F9FF;
     color: #0284C7;
     border-radius: 8px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     margin-left: 8px;
 }
 
@@ -139,8 +140,8 @@
 
 .pricing-card-modern {
     background: white;
-    padding: 48px 40px;
-    border-radius: 24px;
+    padding: 32px 28px;
+    border-radius: 20px;
     border: 1px solid rgba(226, 232, 240, 0.8);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     position: relative;
@@ -170,7 +171,7 @@
     color: #7C3AED;
     padding: 6px 16px;
     border-radius: 100px;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 800;
     display: flex;
     align-items: center;
@@ -183,16 +184,16 @@
     color: #94A3B8;
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     letter-spacing: 0.05em;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .plan-title-flex {
     display: flex;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 12px;
+    margin-bottom: 16px;
 }
 
 .plan-icon-modern {
@@ -206,7 +207,7 @@
 }
 
 .plan-title-flex h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: #0F172A;
 }
@@ -219,7 +220,7 @@
 }
 
 .price-amount {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: #0F172A;
     letter-spacing: -0.02em;
@@ -228,32 +229,32 @@
 .price-period {
     color: #64748B;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
 
 .plan-desc-modern {
     color: #475569;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
 }
 
 .plan-features-modern {
     list-style: none;
     padding: 0;
-    margin: 0 0 48px;
+    margin: 0 0 32px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .plan-features-modern li {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     color: #334155;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
 }
 
 .check-box-modern {
@@ -275,10 +276,10 @@
 
 .pricing-btn-modern {
     width: 100%;
-    padding: 16px 24px;
-    border-radius: 14px;
+    padding: 12px 20px;
+    border-radius: 12px;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.9rem;
     border: 1px solid #E2E8F0;
     background: white;
     color: #0F172A;
@@ -309,10 +310,10 @@
 
 .pricing-trust-note {
     text-align: center;
-    margin-top: 48px;
+    margin-top: 32px;
     color: #94A3B8;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
 @media (max-width: 1024px) {
