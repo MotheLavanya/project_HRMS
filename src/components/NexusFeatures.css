@@ -57,7 +57,7 @@
 }
 
 .tabbed-title {
-    font-size: 1.3rem !important;
+    font-size: 1.8rem !important;
     font-weight: 700 !important;
     line-height: 1.1;
     color: #111827;
@@ -70,7 +70,7 @@
 }
 
 .tabbed-desc {
-    font-size: 0.85rem;
+    font-size: 1.125rem !important;
     line-height: 1.5;
     color: #4b5563;
     max-width: 650px;
